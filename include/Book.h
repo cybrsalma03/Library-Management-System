@@ -20,6 +20,7 @@ public:
     int getId() const;
     string getTitle() const;
     string getAuthor() const;
+    string getCategory() const;
     bool available() const;
 
     void borrowBook();
