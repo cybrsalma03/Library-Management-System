@@ -31,7 +31,7 @@ This is a **console-based library management system** built in C++ that allows u
 ### Steps
 1. **Clone the repository:**
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/cybrsalma03/Library-Management-System.git
 cd Library-Management-System
 ```
 
@@ -86,4 +86,4 @@ data/users.txt
 ## Author
 
 * Salma Fouad
-* GitHub: [Your GitHub URL]
+* GitHub: (https://github.com/cybrsalma03)
