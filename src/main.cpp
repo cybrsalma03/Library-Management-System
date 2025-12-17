@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
     Library library;
+    library.loadData();
     int choice;
 
     do
