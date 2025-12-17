@@ -86,4 +86,5 @@ data/users.txt
 ## Author
 
 * Salma Fouad
-* GitHub: (https://github.com/cybrsalma03)
+* GitHub: www.github.com/cybrsalma03
+* LinkedIn: www.linkedin.com/in/salma-fouad-112927249
