@@ -13,7 +13,11 @@ int main()
         cout << "1. Add Book\n";
         cout << "2. View Books\n";
         cout << "3. Search Book\n";
-        cout << "4. Exit\n";
+        cout << "4. Add User\n";
+        cout << "5. View Users\n";
+        cout << "6. Borrow Book\n";
+        cout << "7. Return Book\n";
+        cout << "8. Exit\n";
         cout << "Enter choice: ";
         cin >> choice;
 
@@ -29,12 +33,24 @@ int main()
             library.searchBook();
             break;
         case 4:
+            library.addUser();
+            break;
+        case 5:
+            library.viewUsers();
+            break;
+        case 6:
+            library.borrowBook();
+            break;
+        case 7:
+            library.returnBook();
+            break;
+        case 8:
             cout << "Goodbye!\n";
             break;
         default:
             cout << "Invalid choice!\n";
         }
-    } while (choice != 4);
+    } while (choice != 8);
 
     return 0;
 }
