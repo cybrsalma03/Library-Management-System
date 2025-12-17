@@ -11,7 +11,13 @@ void Library::addBook()
 
     cout << "Enter Book ID: ";
     cin >> id;
-    cin.ignore(); // clear newline
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid Book ID! Must be a number.\n";
+        return;
+    }
     cout << "Enter Book Title: ";
     getline(cin, title);
     cout << "Enter Author Name: ";
@@ -86,7 +92,13 @@ void Library::addUser()
 
     cout << "Enter User ID: ";
     cin >> id;
-    cin.ignore();
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid User ID! Must be a number.\n";
+        return; // exit function or loop again
+    }
     cout << "Enter User Name: ";
     getline(cin, name);
 
@@ -137,6 +149,13 @@ void Library::borrowBook()
     int userId, bookId;
     cout << "Enter your User ID: ";
     cin >> userId;
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid User ID! Must be a number.\n";
+        return; // exit function or loop again
+    }
 
     // Find user
     bool userFound = false;
@@ -156,6 +175,13 @@ void Library::borrowBook()
 
     cout << "Enter Book ID to borrow: ";
     cin >> bookId;
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid Book ID! Must be a number.\n";
+        return;
+    }
 
     // Find book
     for (Book &b : books)
@@ -191,6 +217,13 @@ void Library::returnBook()
     int bookId;
     cout << "Enter Book ID to return: ";
     cin >> bookId;
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid Book ID! Must be a number.\n";
+        return;
+    }
 
     // Find book
     for (Book &b : books)
