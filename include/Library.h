@@ -21,6 +21,9 @@ public:
 
     void borrowBook();
     void returnBook();
+
+    void loadData();
+    void saveData();
 };
 
 #endif
